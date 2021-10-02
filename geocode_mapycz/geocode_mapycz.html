@@ -1,0 +1,24 @@
+<!-- Based on: https://api.mapy.cz/view?page=geocoding -->
+<!-- Docs: https://api.mapy.cz/doc/SMap.Geocoder.html -->
+
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>api4.mapy.cz - geokódování</title>
+        <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
+    </head>
+    <body id="advanced-geocoding">
+        <form id="form">
+            <p>
+                <label>Hledaná oblast: <input type="text" id="query" value="" /></label><br><br>
+                <label>Omezit na: <input type="text" id="locality" value="" /></label><br><br>
+                <label>Počet výsledků: <input type="text" id="count" value="" /></label><br><br>
+                <label>V jazyce: <input type="text" id="lang" value="" /></label><br><br>
+                <input type="submit" id="button" value="Hledat" />
+            </p>
+        </form>
+        <script type="text/javascript" src="geocode_mapycz.js"></script>
+    </body>
+</html>
