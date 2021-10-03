@@ -7,6 +7,19 @@ import json
 
 # Geocode via Mapy.cz
 def geocode_mapycz(queries, locality='', limit=1, lang='cs', cap=1000):
+    """
+    Geocode places via Mapy.cz using Selenium.
+
+    Parameters:
+    queries (list): Places to be queried for geocoding
+    locality (string): Locations to which limit geocoding
+    limit (int): Number of matches to be made per place
+    lang (string): Language (abbreviation) in which to return the matches
+    cap (int): Limit to number of API calls to be made
+
+    Returns:
+    dict: Payload that includes label, address, GPS coordinates, and input info
+    """
 
     # Start Firefox (make sure its driver is in PATH)
     driver = webdriver.Firefox()
