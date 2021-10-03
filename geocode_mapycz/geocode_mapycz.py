@@ -26,7 +26,7 @@ def geocode_mapycz(queries, locality='', limit=1, lang='cs', cap=1000):
 
     # Load local page with simple interface for connecting to API via JS
     html = os.path.join(os.path.dirname(__file__), 'geocode_mapycz.html')
-    driver.get('file:///' + html)
+    driver.get('file://' + html)
 
     # Fill in details
     driver.find_element_by_id('locality').send_keys(locality)
