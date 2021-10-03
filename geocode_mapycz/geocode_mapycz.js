@@ -1,17 +1,17 @@
-function geokoduj(e, elm) {  /* Voláno při odeslání */
-  JAK.Events.cancelDef(e); /* Zamezit odeslání formuláře */
+function geocode(e, elm) {  /* Called during submit */
+  JAK.Events.cancelDef(e); /* Prevents sending the form */
   var query = document.getElementById("query").value;
   var locality = document.getElementById("locality").value;
   var count = document.getElementById("count").value;
   var lang = document.getElementById("lang").value;
-  new SMap.Geocoder(query, odpoved, {
+  new SMap.Geocoder(query, response, {
     locality: locality,
     count: count,
     lang: lang
   });
 }
 
-function odpoved(geocoder) { /* Odpověď */
+function response(geocoder) { /* Response */
   if (!geocoder.getResults()[0].results.length) {
     alert("[]");
     return;
@@ -19,7 +19,7 @@ function odpoved(geocoder) { /* Odpověď */
 
   var res = geocoder.getResults()[0].results;
   var data = []
-  while (res.length) { /* Zobrazit všechny výsledky hledání */
+  while (res.length) { /* Show all responses */
       var item = res.shift()
       data.push('{"coords": "' + item.coords + '", "label": "' + item.label + '"}');
   }
@@ -27,4 +27,4 @@ function odpoved(geocoder) { /* Odpověď */
 }
 
 var form = JAK.gel("form");
-JAK.Events.addListener(form, "submit", geokoduj); /* Při odeslání formuláře pustit geokódování */
+JAK.Events.addListener(form, "submit", geocode); /* Start geocoding when the form is submitted */

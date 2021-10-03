@@ -5,17 +5,17 @@
     <html>
     <head>
         <meta charset="utf-8" />
-        <title>api4.mapy.cz - geokódování</title>
+        <title>geocode-mapycz</title>
         <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
         <script type="text/javascript">Loader.load();</script>
     </head>
     <body id="advanced-geocoding">
         <form id="form">
             <p>
-                <label>Hledaná oblast: <input type="text" id="query" value="" /></label><br><br>
-                <label>Omezit na: <input type="text" id="locality" value="" /></label><br><br>
-                <label>Počet výsledků: <input type="text" id="count" value="" /></label><br><br>
-                <label>V jazyce: <input type="text" id="lang" value="" /></label><br><br>
+                <label>Query: <input type="text" id="query" value="" /></label><br><br>
+                <label>Locality: <input type="text" id="locality" value="" /></label><br><br>
+                <label>Limit: <input type="text" id="count" value="" /></label><br><br>
+                <label>Language: <input type="text" id="lang" value="" /></label><br><br>
                 <input type="submit" id="button" value="Hledat" />
             </p>
         </form>
