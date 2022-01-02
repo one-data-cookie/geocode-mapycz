@@ -1,6 +1,6 @@
 # geocode-mapycz
 
-A Python package that uses Selenium to access JavaScript API of Mapy.cz for geocoding.
+A Python package that uses Selenium to access JavaScript API of [Mapy.cz](https://en.mapy.cz/) for geocoding.
 
 ## Installation
 You can either clone this repo and use it as is, or you can pip-install it through:
